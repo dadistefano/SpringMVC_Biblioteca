@@ -1,0 +1,64 @@
+
+-- CARGAR DATOS GENEROS
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('literario');
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('lirico');
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('dramatico');
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('didactico');
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('narrativo');
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('novela');
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('novela de aventura');
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('ciencia ficcion');
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('gotica');
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('policial');
+INSERT INTO `bdtpi_grupo8`.`genero` (`gen_descripcion`) VALUES('paranormal');
+
+- CARGAR DATOS NACIONALIDADES
+INSERT INTO `bdtpi_grupo8`.`nacionalidades`(`nac_descripcion`)VALUES('Brasil');
+INSERT INTO `bdtpi_grupo8`.`nacionalidades`(`nac_descripcion`)VALUES('Paraguay');
+INSERT INTO `bdtpi_grupo8`.`nacionalidades`(`nac_descripcion`)VALUES('Chile');
+INSERT INTO `bdtpi_grupo8`.`nacionalidades`(`nac_descripcion`)VALUES('Uruguay');
+INSERT INTO `bdtpi_grupo8`.`nacionalidades`(`nac_descripcion`)VALUES('Colombia');
+INSERT INTO `bdtpi_grupo8`.`nacionalidades`(`nac_descripcion`)VALUES('Mexico');
+INSERT INTO `bdtpi_grupo8`.`nacionalidades`(`nac_descripcion`)VALUES('Canada');
+INSERT INTO `bdtpi_grupo8`.`nacionalidades`(`nac_descripcion`)VALUES('España');
+INSERT INTO `bdtpi_grupo8`.`nacionalidades`(`nac_descripcion`)VALUES('Italia');
+
+- CARGAR DATOS AUTORES
+
+INSERT INTO `bdtpi_grupo8`.`autores`(`aut_apellido`,`aut_email`,`aut_nombre`,`nac_id`)VALUES('Borges','b@gmail.com','Jorge Luis','1');
+INSERT INTO `bdtpi_grupo8`.`autores`(`aut_apellido`,`aut_email`,`aut_nombre`,`nac_id`)VALUES('Baroja','bpio@gmail.com','Pio','10');
+INSERT INTO `bdtpi_grupo8`.`autores`(`aut_apellido`,`aut_email`,`aut_nombre`,`nac_id`)VALUES('Benedetti','mario@gmail.com','Mario','6');
+INSERT INTO `bdtpi_grupo8`.`autores`(`aut_apellido`,`aut_email`,`aut_nombre`,`nac_id`)VALUES('Marquez','gm@gmail.com','Gabriel Garcia','7');
+INSERT INTO `bdtpi_grupo8`.`autores`(`aut_apellido`,`aut_email`,`aut_nombre`,`nac_id`)VALUES('Cortazar','jc@gmail.com','Julio','1');
+INSERT INTO `bdtpi_grupo8`.`autores`(`aut_apellido`,`aut_email`,`aut_nombre`,`nac_id`)VALUES('Del Paso','delpaso@gmail.com','Fernando','8');
+INSERT INTO `bdtpi_grupo8`.`autores`(`aut_apellido`,`aut_email`,`aut_nombre`,`nac_id`)VALUES('Benet','benet@hotmail.com','Juan','10');
+INSERT INTO `bdtpi_grupo8`.`autores`(`aut_apellido`,`aut_email`,`aut_nombre`,`nac_id`)VALUES('Donoso','dono@yahoo.com','Jose','5');
+
+- CARGAR DATOS LIBROS
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('150','Latinoamericano','1994-01-05','Castellano','Ficciones','3');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('160','Epico','1902-02-10','Catalan','Cañas y barros','4');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('200','Epico','1916-03-05','Castellano','Los 4 jinetes del apocalipsis','4');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('300','Excelente','1904-10-12','Castellano','La lucha de la vida','5');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('250','Epico','1909-01-04','Nordico','Zolacain el aventurero','5');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('125','Epico','1911-06-06','Castellano','La inquietud de Shanti andia','5');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('301','Bueno','1960-12-10','Aleman','La tregua','6');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('200','Muy Bueno','1961-03-05','Castellano','El Coronel no tiene quien le escriba','7');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('190','Epico','1962-11-11','Castellano','La mala hora','7');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('100','Bueno','1967-04-05','Frances','Cien años de soledad','7');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('146','Epico','1981-10-06','Castellano','Cronicas de una muerte anunciada','7');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('360','Excelente','1985-08-07','Castellano','El amor en los tiempos de colera','7');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('240','Epico','1963-05-05','Castellano','Rayuela','8');
+INSERT INTO `bdtpi_grupo8`.`libros`(`lib_cantidad_paginas`,`Descripcion`,`lib_fecha_lanzamiento`,`lib_dioma`,`lib_titulo`,`aut_id`)VALUES('260','Good','1966-08-7','Ingles','Jose Trigo','9');
+
+- CARGAR DATOS GENERO X LIBROS
+INSERT INTO `bdtpi_grupo8`.`generos_x_libro`(`lib_isbn`,`gen_id`)VALUES('3','4');
+INSERT INTO `bdtpi_grupo8`.`generos_x_libro`(`lib_isbn`,`gen_id`)VALUES('17','4');
+INSERT INTO `bdtpi_grupo8`.`generos_x_libro`(`lib_isbn`,`gen_id`)VALUES('4','8');
+INSERT INTO `bdtpi_grupo8`.`generos_x_libro`(`lib_isbn`,`gen_id`)VALUES('5','7');
+INSERT INTO `bdtpi_grupo8`.`generos_x_libro`(`lib_isbn`,`gen_id`)VALUES('6','8');
+INSERT INTO `bdtpi_grupo8`.`generos_x_libro`(`lib_isbn`,`gen_id`)VALUES('7','10');
+INSERT INTO `bdtpi_grupo8`.`generos_x_libro`(`lib_isbn`,`gen_id`)VALUES('8','8');
+INSERT INTO `bdtpi_grupo8`.`generos_x_libro`(`lib_isbn`,`gen_id`)VALUES('9','4');
+INSERT INTO `bdtpi_grupo8`.`generos_x_libro`(`lib_isbn`,`gen_id`)VALUES('10','12');
+INSERT INTO `bdtpi_grupo8`.`generos_x_libro`(`lib_isbn`,`gen_id`)VALUES('11','9');
+

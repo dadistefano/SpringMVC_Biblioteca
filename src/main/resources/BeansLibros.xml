@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+     http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd">
+     
+     <!-- Bean carga de Libros -->
+	<bean id="Libro1" class="frgp.utn.edu.ar.dominio.Libro">
+	<property name="titulo" value="El Aleph"></property>
+	<property name="fechaLanzamiento" value="1945"></property>
+	<property name="idioma" value="Español"></property>
+	<property name="cantPaginas" value="146"></property>
+	<property name="autor" ref="Autor1"></property>
+	<property name="descripcion" value="Cuento del escritor argentino Jorge Luis Borges publicado en la revista Sur en 1945."></property>
+	<property name="listaGeneros" value="jlborges@gmail.com">
+		<list>
+			<ref bean="GeneroFiccion" />
+		</list>
+	</property>
+	</bean>
+	
+	<bean id="Libro2" class="frgp.utn.edu.ar.dominio.Libro">
+	<property name="titulo" value="El amor en los tiempos del cólera"></property>
+	<property name="fechaLanzamiento" value="1985"></property>
+	<property name="idioma" value="Español"></property>
+	<property name="cantPaginas" value="490"></property>
+	<property name="autor" ref="Autor4"></property>
+	<property name="descripcion" value="El amor en los tiempos del cólera es una novela del escritor colombiano Gabriel García Márquez, publicada en 1985. Es una novela dedicada al verdadero amor que perdura y supera las adversidades toda una vida. Es un homenaje al amor, las aventuras, el tiempo, la vejez y la muerte"></property>
+	<property name="listaGeneros" value="jlborges@gmail.com">
+		<list>
+			<ref bean="GeneroNovela" />
+		</list>
+	</property>
+	</bean>
+
+     
+</beans>

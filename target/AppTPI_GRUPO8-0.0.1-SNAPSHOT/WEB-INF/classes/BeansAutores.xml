@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+     http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd">
+     
+     <!-- Bean carga de Autores -->
+	<bean id="Autor1" class="frgp.utn.edu.ar.dominio.Autor">
+	<property name="nombre" value="Jorge Luis"></property>
+	<property name="apellido" value="Borges"></property>
+	<property name="nacionalidad" ref="NacionalidadArgentina"></property>
+	<property name="email" value="jlborges@gmail.com"></property>
+	</bean>
+	
+	<bean id="Autor2" class="frgp.utn.edu.ar.dominio.Autor">
+	<property name="nombre" value="Federico"></property>
+	<property name="apellido" value="García Lorca"></property>
+	<property name="nacionalidad" ref="NacionalidadEspaña"></property>
+	<property name="email" value="fgarcialorca@gmail.com"></property>
+	</bean>
+	
+	<bean id="Autor3" class="frgp.utn.edu.ar.dominio.Autor">
+	<property name="nombre" value="Pablo"></property>
+	<property name="apellido" value="Neruda"></property>
+	<property name="nacionalidad" ref="NacionalidadChile"></property>
+	<property name="email" value="pneruda@gmail.com"></property>
+	</bean>
+	
+	<bean id="Autor4" class="frgp.utn.edu.ar.dominio.Autor">
+	<property name="nombre" value="Gabriel"></property>
+	<property name="apellido" value="García Márquez"></property>
+	<property name="nacionalidad" ref="NacionalidadColombia"></property>
+	<property name="email" value="ggmarquez@gmail.com"></property>
+	</bean>
+	
+     
+     
+</beans>

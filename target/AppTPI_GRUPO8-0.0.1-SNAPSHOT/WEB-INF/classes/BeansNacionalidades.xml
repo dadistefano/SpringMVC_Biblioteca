@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+     http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd">
+     
+     <!-- Bean carga de Nacionalidades -->
+	<bean id="NacionalidadArgentina" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="Argentina"></property>
+	</bean>
+	
+	<bean id="NacionalidadChile" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="Chile"></property>
+	</bean>
+	
+	<bean id="NacionalidadEEUU" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="Estados Unidos"></property>
+	</bean>
+	
+	<bean id="NacionalidadInglaterra" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="Inglaterra"></property>
+	</bean>
+	
+	<bean id="NacionalidadBrasil" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="Brasil"></property>
+	</bean>
+	
+	<bean id="NacionalidadJapon" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="Japón"></property>
+	</bean>
+	
+	<bean id="NacionalidadMexico" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="Mexico"></property>
+	</bean>
+	
+	<bean id="NacionalidadColombia" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="Colombia"></property>
+	</bean>
+	
+	<bean id="NacionalidadEspaña" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="España"></property>
+	</bean>
+	
+	<bean id="NacionalidadFrancia" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="Francia"></property>
+	</bean>
+	
+	<bean id="NacionalidadArgentina" class="frgp.utn.edu.ar.dominio.Nacionalidad">
+	<property name="descripcion" value="Argentina"></property>
+	</bean>
+	
+     
+     
+</beans>

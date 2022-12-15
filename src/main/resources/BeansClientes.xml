@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+     http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd">
+     
+     <!-- Bean carga de Clientes -->
+	<bean id="Cliente1" class="frgp.utn.edu.ar.dominio.Cliente">
+	<property name="dni" value="41976003"></property>
+	<property name="nombre" value="Carlos"></property>
+	<property name="apellido" value="Lopez"></property>
+	<property name="sexo" value="Masculino"></property>
+	<property name="fechaNacimiento" value="23/04/1999"></property>
+	<property name="direccion" value="Medellín 342"></property>
+	<property name="localidad" value="Moreno"></property>
+	<property name="correo" value="carlosp@gmail.com"></property>
+	<property name="telefono" value="156683403"></property>
+	</bean>
+	
+	<bean id="Cliente2" class="frgp.utn.edu.ar.dominio.Cliente">
+	<property name="dni" value="38950448"></property>
+	<property name="nombre" value="Maria"></property>
+	<property name="apellido" value="Sanchez"></property>
+	<property name="sexo" value="Femenino"></property>
+	<property name="fechaNacimiento" value="10/10/1992"></property>
+	<property name="direccion" value="San José 6662"></property>
+	<property name="localidad" value="San Miguel"></property>
+	<property name="correo" value="marisan@gmail.com"></property>
+	<property name="telefono" value="1577842096"></property>
+	</bean>
+	
+     
+</beans>

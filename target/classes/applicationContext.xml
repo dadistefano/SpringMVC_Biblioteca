@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+     http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+	<!-- Transaction Manager -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactoryBean"></property>
+	</bean>
+
+	<!-- Para que lea los metodos anotados con @Transactional -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+
+	<!-- CREO EL SERVICIO PARA USUARIO -->
+	<bean id="serviceBean" class="frgp.utn.edu.ar.servicioImpl.UsuarioServicioImpl">
+		<property name="dataAccess" ref="dataAccessBean"></property>
+	</bean>
+	
+	<!-- CREO EL SERVICIO PARA CLIENTE -->
+	<bean id="serviceBeanCliente" class="frgp.utn.edu.ar.servicioImpl.ClienteServicioImpl"> <!-- ver id  -->
+		<property name="dataAccessCliente" ref="dataAccessBeanCliente"></property>
+	</bean>
+	
+	<!-- CREO EL SERVICIO PARA BIBLIOTECA -->
+	<bean id="serviceBeanBiblioteca" class="frgp.utn.edu.ar.servicioImpl.BibliotecaServicioImpl"> 
+		<property name="dataAccessBiblioteca" ref="dataAccessBeanBiblioteca"></property>
+	</bean>
+	
+	<!-- CREO EL SERVICIO PARA PRESTAMOS -->
+	<bean id="serviceBeanPrestamo" class="frgp.utn.edu.ar.servicioImpl.PrestamoServicioImpl"> 
+		<property name="dataAccessPrestamo" ref="dataAccessBeanPrestamo"></property>
+	</bean>
+	
+	<!-- CREO EL SERVICIO PARA USUARIO -->
+	<bean id="serviceBeanLibro" class="frgp.utn.edu.ar.servicioImpl.LibroServicioImpl">
+		<property name="dataAccessLibro" ref="dataAccessBeanLibro"></property>
+	</bean>
+	
+	
+	
+	<!-- EL SERVICIO NECESITA EL DAO USUARIO -->
+	<bean id="dataAccessBean" class="frgp.utn.edu.ar.daoImpl.UsuarioDaoImpl" 
+		scope="singleton"> 
+		<property name="sessionFactory" ref="sessionFactoryBean"></property> 
+	</bean>
+	
+	<!-- EL SERVICIO NECESITA EL DAO CLIENTE -->
+	<bean id="dataAccessBeanCliente" class="frgp.utn.edu.ar.daoImpl.ClienteDaoImpl" 
+		scope="singleton"> 
+		<property name="sessionFactory" ref="sessionFactoryBean"></property> 
+	</bean>
+	
+	<!-- EL SERVICIO NECESITA EL DAO BIBLIOTECA -->
+	<bean id="dataAccessBeanBiblioteca" class="frgp.utn.edu.ar.daoImpl.BibliotecaDaoImpl" 
+		scope="singleton"> 
+		<property name="sessionFactory" ref="sessionFactoryBean"></property> 
+	</bean>
+
+	<!-- EL SERVICIO NECESITA EL DAO PRESTAMO -->
+	<bean id="dataAccessBeanPrestamo" class="frgp.utn.edu.ar.daoImpl.PrestamoDaoImpl" 
+		scope="singleton"> 
+		<property name="sessionFactory" ref="sessionFactoryBean"></property> 
+	</bean>
+	
+	<!-- EL SERVICIO NECESITA EL DAO LIBROS -->
+	<bean id="dataAccessBeanLibro" class="frgp.utn.edu.ar.daoImpl.LibroDaoImpl" 
+		scope="singleton"> 
+		<property name="sessionFactory" ref="sessionFactoryBean"></property> 
+	</bean>
+	
+
+	<!-- Define un dataSource, en este bean se configura los parametros de la db -->
+	<bean id="dataSourceBean"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/BDTPI_GRUPO8?createDatabaseIfNotExist=true" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<!-- Session factory de Hibernate -->
+	<bean id="sessionFactoryBean"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceBean" />
+
+		<!-- En esta propiedad deberian agregarse todas las clases anotadas con JPA. -->
+		<property name="annotatedClasses">
+			<list>
+				<value>frgp.utn.edu.ar.dominio.Usuario</value>
+				<value>frgp.utn.edu.ar.dominio.Autor</value>
+				<value>frgp.utn.edu.ar.dominio.Nacionalidad</value>
+				<value>frgp.utn.edu.ar.dominio.Biblioteca</value>
+				<value>frgp.utn.edu.ar.dominio.Cliente</value>
+				<value>frgp.utn.edu.ar.dominio.Libro</value>
+				<value>frgp.utn.edu.ar.dominio.Prestamo</value>
+				<value>frgp.utn.edu.ar.dominio.Genero</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+				<prop key="show_sql">true</prop >
+				
+				<!-- CREACION DE LA BASE -->
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+
+	
+	
+</beans>
